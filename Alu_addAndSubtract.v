@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Created_by: Rochak Jain
 // 
 // Create Date: 05.05.2020 18:20:51
 // Design Name: 
@@ -29,7 +29,7 @@ module Alu_addAndSubtract(
     output [31:0] result //Outputs in the format of IEEE-754 Representation. 
     );
     
-    wire [31:0] a_oprnd, b_oprnd;
+    wire [31:0] a_oprnd, b_oprnd; 
     wire [23:0] a_significand, b_significand;
     wire [7:0] exponent_b_updated;
     
