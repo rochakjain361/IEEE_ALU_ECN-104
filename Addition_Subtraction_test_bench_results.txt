@@ -1,0 +1,862 @@
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Alu_addition_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Alu_addition_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/Floating_Point_ALU/Floating_Point_ALU.srcs/sources_1/new/Priority_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Priority_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/Downloads/division_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Alu_division_tb
+INFO: [VRFC 10-311] analyzing module Alu_division
+INFO: [VRFC 10-311] analyzing module Iteration
+INFO: [VRFC 10-311] analyzing module Alu_multiplication
+INFO: [VRFC 10-311] analyzing module Alu_addAndSubtract
+INFO: [VRFC 10-2458] undeclared symbol Exception, assumed default net type wire [C:/Users/Rochak Roopesh Jain/Downloads/division_test.v:319]
+INFO: [VRFC 10-2458] undeclared symbol perform, assumed default net type wire [C:/Users/Rochak Roopesh Jain/Downloads/division_test.v:340]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/Alu_addition_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Alu_addition_tb
+INFO: [VRFC 10-311] analyzing module Alu_addAndSubtract
+INFO: [VRFC 10-2458] undeclared symbol Exception, assumed default net type wire [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/Alu_addition_tb.v:941]
+INFO: [VRFC 10-2458] undeclared symbol perform, assumed default net type wire [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/Alu_addition_tb.v:962]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Alu_addAndSubtract' [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/Alu_addition_tb.v:909]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+"xelab -wto 24bb8ad462474ddebfb22d41ca849cb8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Alu_addition_tb_behav xil_defaultlib.Alu_addition_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 24bb8ad462474ddebfb22d41ca849cb8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Alu_addition_tb_behav xil_defaultlib.Alu_addition_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Priority_encoder
+Compiling module xil_defaultlib.Alu_addAndSubtract
+Compiling module xil_defaultlib.Alu_addition_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Alu_addition_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Alu_addition_tb_behav -key {Behavioral:sim_1:Functional:Alu_addition_tb} -tclbatch {Alu_addition_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source Alu_addition_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test Failed A => 49171089, B => c9e3e24d, Result Obtained => c9185a09,  Expected Value => c9985a08 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4910b713, B => ca9257ba, Result Obtained => ca0040d8,  Expected Value => ca8040d8 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb04cfba, B => 4af9c43b, Result Obtained => cafdb3a0,  Expected Value => c8fdb390 - Line Number
+Test Failed A => cadb8b5e, B => 4a2893b5, Result Obtained => ca074184,  Expected Value => ca874184 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4ad97703, B => ca9cc5a1, Result Obtained => 4a72c588,  Expected Value => 49f2c588 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 491610c6, B => cac610d0, Result Obtained => ca334eb8,  Expected Value => cab34eb7 - Line Number
+Test Passed 
+Test Failed A => 4afc9ba8, B => c75aa839, Result Obtained => 4a7ae658,  Expected Value => 4afae658 - Line Number
+Test Passed 
+Test Failed A => 49c2a275, B => c99cbfa9, Result Obtained => 49178b30,  Expected Value => 48978b30 - Line Number
+Test Failed A => ca092cd5, B => 4ac65027, Result Obtained => 4a01b9bd,  Expected Value => 4a81b9bc - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => ca955412, B => 4ac725ea, Result Obtained => 4a474760,  Expected Value => 49c74760 - Line Number
+Test Passed 
+Test Failed A => c9b61635, B => 49e04efa, Result Obtained => 4928e314,  Expected Value => 48a8e314 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => cabe02a2, B => 4a9bf2d7, Result Obtained => ca083f2c,  Expected Value => c9883f2c - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4ae66a99, B => cb0463bc, Result Obtained => ca897380,  Expected Value => c989737c - Line Number
+Test Failed A => 4b1888a7, B => caddd514, Result Obtained => 4aa67874,  Expected Value => 4a267874 - Line Number
+Test Failed A => 4aabf9c7, B => c99db479, Result Obtained => 4a048ca9,  Expected Value => 4a848ca9 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb0b89c9, B => 4ac0e488, Result Obtained => caac5e14,  Expected Value => ca2c5e14 - Line Number
+Test Failed A => cae9c84e, B => 49017e71, Result Obtained => ca599880,  Expected Value => cad99880 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => ca3c8490, B => 48afdd99, Result Obtained => c9a688dd,  Expected Value => ca2688dd - Line Number
+Test Failed A => 4ada0d7c, B => caa29ef2, Result Obtained => 4a5dba28,  Expected Value => 49ddba28 - Line Number
+Test Passed 
+Test Failed A => cadd8bae, B => 4b06b747, Result Obtained => 4abf8b80,  Expected Value => 49bf8b80 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 481f7647, B => cb1111dc, Result Obtained => ca8e9403,  Expected Value => cb0e9403 - Line Number
+Test Passed 
+Test Failed A => cad4eb26, B => 49fb54e0, Result Obtained => ca1615ee,  Expected Value => ca9615ee - Line Number
+Test Failed A => cade5575, B => 49d2a06f, Result Obtained => ca29ad5a,  Expected Value => caa9ad59 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => cb059a9d, B => 4afd0338, Result Obtained => cae32020,  Expected Value => c8e32020 - Line Number
+Test Failed A => 49b9e4f9, B => ca1481d5, Result Obtained => c9de3d64,  Expected Value => c95e3d62 - Line Number
+Test Failed A => c5c6e1bb, B => 4ab16b44, Result Obtained => 4a31398c,  Expected Value => 4ab1398c - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4992af8b, B => cacab0aa, Result Obtained => ca2604c8,  Expected Value => caa604c7 - Line Number
+Test Failed A => cb0456f3, B => 4a9c2fdc, Result Obtained => cad8fc14,  Expected Value => ca58fc14 - Line Number
+Test Passed 
+Test Failed A => 4a99ca31, B => ca45e72d, Result Obtained => 4a5b5a6c,  Expected Value => 49db5a6a - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caa00866, B => 4b0aa165, Result Obtained => 4aea74c8,  Expected Value => 4a6a74c8 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4a2d6fac, B => c73999bf, Result Obtained => 49aa8946,  Expected Value => 4a2a8945 - Line Number
+Test Failed A => cad3800b, B => 49eb80cf, Result Obtained => ca189fd8,  Expected Value => ca989fd7 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cae99318, B => 48883f9f, Result Obtained => ca610f1f,  Expected Value => cae10f1e - Line Number
+Test Passed 
+Test Failed A => c93983ba, B => 4ae0b1af, Result Obtained => 4a498138,  Expected Value => 4ac98138 - Line Number
+Test Failed A => 497bc53a, B => cae3304f, Result Obtained => ca43b7a8,  Expected Value => cac3b7a8 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 46b9c4a2, B => cb03dadf, Result Obtained => ca837dfd,  Expected Value => cb037dfd - Line Number
+Test Failed A => c902bd45, B => 4acbef6d, Result Obtained => 4a3b97c5,  Expected Value => 4abb97c4 - Line Number
+Test Passed 
+Test Failed A => 4b052d02, B => cabf5ad2, Result Obtained => 4a95fe64,  Expected Value => 4a15fe64 - Line Number
+Test Passed 
+Test Failed A => 4a4ec511, B => ca13a5e9, Result Obtained => 49ec7ca0,  Expected Value => 496c7ca0 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4b1218eb, B => caa82cdc, Result Obtained => 4af809f4,  Expected Value => 4a7809f4 - Line Number
+Test Failed A => ca39b92d, B => 4a236748, Result Obtained => c9b28f28,  Expected Value => c8b28f28 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 49ba8824, B => ca601b84, Result Obtained => c982d772,  Expected Value => ca02d772 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caf45f13, B => 4b154db6, Result Obtained => 4ad8f168,  Expected Value => 49d8f164 - Line Number
+Test Passed 
+Test Failed A => 4acf4f8f, B => cb1865bf, Result Obtained => cac2f7e0,  Expected Value => ca42f7de - Line Number
+Test Failed A => c99c8aa2, B => 4aec8f5e, Result Obtained => 4a456cb6,  Expected Value => 4ac56cb6 - Line Number
+Test Passed 
+Test Failed A => 4a9046d5, B => cb019b1a, Result Obtained => cae5dec0,  Expected Value => ca65debe - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb172cae, B => 4afe8068, Result Obtained => cabf63d0,  Expected Value => c9bf63d0 - Line Number
+Test Passed 
+Test Failed A => caf37f53, B => 48dcdd02, Result Obtained => ca65b183,  Expected Value => cae5b183 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4ad5df5b, B => ca052561, Result Obtained => 4a134cab,  Expected Value => 4a934caa - Line Number
+Test Passed 
+Test Failed A => c9b271f0, B => 4a118c0d, Result Obtained => 49e14c54,  Expected Value => 49614c54 - Line Number
+Test Failed A => cabc450b, B => 4abd2d40, Result Obtained => 4a683500,  Expected Value => 46e83500 - Line Number
+Test Failed A => caacd47a, B => 495ecdad, Result Obtained => ca10fac5,  Expected Value => ca90fac4 - Line Number
+Test Passed 
+Test Failed A => cac4964d, B => 49fb38e9, Result Obtained => ca05c813,  Expected Value => ca85c813 - Line Number
+Test Passed 
+Test Failed A => 4ae53a6e, B => c988972c, Result Obtained => 4a4314a3,  Expected Value => 4ac314a3 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b15ac69, B => c940b22a, Result Obtained => 4a89a147,  Expected Value => 4b09a146 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 486c82a3, B => c97a509c, Result Obtained => c8bf2ff4,  Expected Value => c93f2ff3 - Line Number
+Test Failed A => 4abb38c0, B => c870bdaa, Result Obtained => 4a33b2d3,  Expected Value => 4ab3b2d3 - Line Number
+Test Failed A => c92aba45, B => 4a417aad, Result Obtained => 4996cc1c,  Expected Value => 4a16cc1c - Line Number
+Test Passed 
+Test Failed A => 4a25ec14, B => ca824f74, Result Obtained => ca3d65a8,  Expected Value => c9bd65a8 - Line Number
+Test Failed A => 4a864658, B => ca5fbd45, Result Obtained => 4a333db0,  Expected Value => 49333dac - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4ab5ed53, B => c908ee45, Result Obtained => 4a24cf8b,  Expected Value => 4aa4cf8a - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4a3a11e6, B => caff9247, Result Obtained => ca228954,  Expected Value => caa28954 - Line Number
+Test Failed A => c88c0f2c, B => 4a542a5a, Result Obtained => 49c2a875,  Expected Value => 4a42a874 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b172367, B => cad22a67, Result Obtained => 4ab838d0,  Expected Value => 4a3838ce - Line Number
+Test Passed 
+Test Failed A => 4b0b7f1e, B => ca9d8695, Result Obtained => 4af2ef50,  Expected Value => 4a72ef4e - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caeb727b, B => 4ad67732, Result Obtained => ca27da48,  Expected Value => c927da48 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => ca900754, B => 4a6f7a1e, Result Obtained => ca425228,  Expected Value => c9425228 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4ad1c9ef, B => cac74a9e, Result Obtained => 4a27f510,  Expected Value => 48a7f510 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4a525dbe, B => c91289f1, Result Obtained => 49adbb42,  Expected Value => 4a2dbb42 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a33d2a5, B => cae3666a, Result Obtained => ca097d18,  Expected Value => ca897d18 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b008c7e, B => ca82cfe9, Result Obtained => 4afc9228,  Expected Value => 4a7c9226 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => c93a756a, B => 4a7686e6, Result Obtained => 49c7e98c,  Expected Value => 4a47e98c - Line Number
+Test Passed 
+Test Failed A => 4a445924, B => ca6d3f32, Result Obtained => c9a39838,  Expected Value => c9239838 - Line Number
+Test Passed 
+Test Failed A => cac355a1, B => 4aa250cc, Result Obtained => ca041354,  Expected Value => c9841354 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4ae9b08d, B => c937b35c, Result Obtained => 4a52ba22,  Expected Value => 4ad2ba22 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4af9a8b2, B => c856bea0, Result Obtained => 4a72f2bd,  Expected Value => 4af2f2bd - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 49177808, B => cb0acfe5, Result Obtained => ca815865,  Expected Value => cb015864 - Line Number
+Test Failed A => cb049b4b, B => 4b038dfd, Result Obtained => ca86a700,  Expected Value => c786a700 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => caad7d51, B => 4ac0b8fc, Result Obtained => 4a19dd58,  Expected Value => 4919dd58 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => cb14e83b, B => 4b0903b1, Result Obtained => cabe48a0,  Expected Value => c93e48a0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b050440, B => cb0c5cf8, Result Obtained => caeb1700,  Expected Value => c8eb1700 - Line Number
+Test Failed A => 4a8b6c14, B => ca74c6bc, Result Obtained => 4a0845b0,  Expected Value => 490845b0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb074990, B => 4b041042, Result Obtained => cace5380,  Expected Value => c84e5380 - Line Number
+Test Passed 
+Test Failed A => 4a9a6bf4, B => caa2b355, Result Obtained => ca047610,  Expected Value => c8847610 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => c71c6e9e, B => 4aed75f6, Result Obtained => 4a6c3d19,  Expected Value => 4aec3d19 - Line Number
+Test Failed A => c8a3c182, B => 4a4f7ec1, Result Obtained => 49bb0691,  Expected Value => 4a3b0691 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => ca95d8f5, B => 4a318ec2, Result Obtained => ca744650,  Expected Value => c9f44650 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4ad8c9ba, B => ca1119b6, Result Obtained => 4a103cdf,  Expected Value => 4a903cdf - Line Number
+Test Passed 
+Test Failed A => 4905a7fc, B => ca274332, Result Obtained => c985d933,  Expected Value => ca05d933 - Line Number
+Test Failed A => cae520b6, B => 4abefb58, Result Obtained => ca189578,  Expected Value => c9989578 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b090a8a, B => cadca57a, Result Obtained => 4ad5be68,  Expected Value => 49d5be68 - Line Number
+Test Passed 
+Test Failed A => cac70c25, B => 481d354c, Result Obtained => ca42227b,  Expected Value => cac2227b - Line Number
+Test Passed 
+Test Failed A => 4883060f, B => caf98c75, Result Obtained => ca715c15,  Expected Value => caf15c14 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cac2dfae, B => 4af0546d, Result Obtained => 4a35d2fc,  Expected Value => 49b5d2fc - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caa352a9, B => 4b005f5a, Result Obtained => 4abad818,  Expected Value => 4a3ad816 - Line Number
+Test Passed 
+Test Failed A => 4ae8b39a, B => cb0d57e1, Result Obtained => cac7f0a0,  Expected Value => c9c7f0a0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a717902, B => ca985e6e, Result Obtained => ca7d0f68,  Expected Value => c97d0f68 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4b03a9dc, B => ca992e50, Result Obtained => 4adc4ad0,  Expected Value => 4a5c4ad0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caa558de, B => 494254e8, Result Obtained => ca0d0e41,  Expected Value => ca8d0e41 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => ca2e2940, B => 48b7e6cd, Result Obtained => c9972c67,  Expected Value => ca172c66 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4aa247f2, B => cad2efa4, Result Obtained => ca429ec8,  Expected Value => c9c29ec8 - Line Number
+Test Failed A => 4a5260d4, B => caa5dbfd, Result Obtained => ca72ae4c,  Expected Value => c9f2ae4c - Line Number
+Test Failed A => cab0bf8a, B => 4aa5b33c, Result Obtained => ca30c4e0,  Expected Value => c8b0c4e0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4aaa6225, B => cb0d9795, Result Obtained => cae19a0c,  Expected Value => ca619a0a - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 49fdba0c, B => cac4c8ed, Result Obtained => ca055a6a,  Expected Value => ca855a6a - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cacd3768, B => 4a98595b, Result Obtained => ca537834,  Expected Value => c9d37834 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4aa69eef, B => ca73187d, Result Obtained => 4a344ac4,  Expected Value => 49b44ac2 - Line Number
+Test Failed A => ca89add8, B => 4ac69fa9, Result Obtained => 4a73c744,  Expected Value => 49f3c744 - Line Number
+Test Failed A => cb06143e, B => 4860eb8b, Result Obtained => ca829090,  Expected Value => cb029090 - Line Number
+Test Failed A => 4786f58d, B => ca60a497, Result Obtained => c9dc6ceb,  Expected Value => ca5c6ceb - Line Number
+Test Passed 
+Test Failed A => 4af7204b, B => cb10dcfe, Result Obtained => caaa66c8,  Expected Value => c9aa66c4 - Line Number
+Test Passed 
+Test Failed A => 4a56479b, B => ca44b4a3, Result Obtained => 498c97c0,  Expected Value => 488c97c0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb114761, B => 4b10e990, Result Obtained => cabba200,  Expected Value => c6bba200 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => c9087022, B => 4addc43a, Result Obtained => 4a4cb636,  Expected Value => 4accb636 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a9b2cd3, B => cabf7c4d, Result Obtained => ca113de8,  Expected Value => c9913de8 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => ca24e9c1, B => 4afa38a9, Result Obtained => 4a27c3c9,  Expected Value => 4aa7c3c8 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b05205c, B => caa2332e, Result Obtained => 4ad01b14,  Expected Value => 4a501b14 - Line Number
+Test Failed A => ca93005a, B => 4a5cdbf5, Result Obtained => ca124980,  Expected Value => c992497e - Line Number
+Test Failed A => 4aa60426, B => cac9fac7, Result Obtained => ca0fda84,  Expected Value => c98fda84 - Line Number
+Test Failed A => 4a3a979e, B => ca749544, Result Obtained => c9e7f698,  Expected Value => c967f698 - Line Number
+Test Failed A => cae2556a, B => 4a3f0c2d, Result Obtained => ca02cf54,  Expected Value => ca82cf54 - Line Number
+Test Passed 
+Test Failed A => cb13f27f, B => 4972328d, Result Obtained => ca84cf57,  Expected Value => cb04cf56 - Line Number
+Test Failed A => 4aa988b4, B => cab118c7, Result Obtained => ca720260,  Expected Value => c8720260 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4b16d799, B => cad24341, Result Obtained => 4ab6d7e4,  Expected Value => 4a36d7e2 - Line Number
+Test Failed A => cabfe12e, B => cb038a87, Result Obtained => 4a8e67c0,  Expected Value => 4a0e67c0 - Line Number
+Test Failed A => 4ac95bb3, B => 4b1332c2, Result Obtained => caba13a4,  Expected Value => ca3a13a2 - Line Number
+Test Failed A => 4ac5c5c1, B => 4abc97eb, Result Obtained => 4a12dd60,  Expected Value => 4892dd60 - Line Number
+Test Failed A => ca86b842, B => c83b1cae, Result Obtained => ca00df5d,  Expected Value => ca80df5d - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a8c6072, B => 4b00e110, Result Obtained => caeac35c,  Expected Value => ca6ac35c - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4aec5bdf, B => 49ef5f05, Result Obtained => 4a30841e,  Expected Value => 4ab0841e - Line Number
+Test Failed A => caae3746, B => c81c724e, Result Obtained => ca2953b4,  Expected Value => caa953b4 - Line Number
+Test Passed 
+Test Failed A => ca2da42d, B => caee44c1, Result Obtained => 4a1772ab,  Expected Value => 4a9772aa - Line Number
+Test Failed A => 4ab08f92, B => 4a9edaae, Result Obtained => 4a0da720,  Expected Value => 490da720 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => c9d2b7a6, B => ca6cb5fc, Result Obtained => 49835a29,  Expected Value => 4a035a29 - Line Number
+Test Failed A => 4b098e51, B => 4ae79cd4, Result Obtained => 4aadff38,  Expected Value => 49adff38 - Line Number
+Test Failed A => ca97dd92, B => ca5de0e8, Result Obtained => ca23b478,  Expected Value => c9a3b478 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => ca435d47, B => cae48b5d, Result Obtained => 4a02dcba,  Expected Value => 4a82dcba - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cae1c85f, B => ca0b164c, Result Obtained => ca1c3d39,  Expected Value => ca9c3d39 - Line Number
+Test Failed A => ca4ab422, B => ca86b1b5, Result Obtained => 4a055e90,  Expected Value => 49855e90 - Line Number
+Test Passed 
+Test Failed A => 4a53b27c, B => 4a97bdde, Result Obtained => ca379280,  Expected Value => c9b79280 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a45727d, B => 491ae196, Result Obtained => 499eba18,  Expected Value => 4a1eba18 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4a06fcfc, B => 4a1a6383, Result Obtained => c99b3438,  Expected Value => c89b3438 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4adf4be3, B => 488961ce, Result Obtained => 4a56b5c7,  Expected Value => 4ad6b5c6 - Line Number
+Test Passed 
+Test Failed A => cabefdb5, B => c98b1022, Result Obtained => ca1c39ad,  Expected Value => ca9c39ac - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4b050d10, B => 4b1485a1, Result Obtained => caf78910,  Expected Value => c9778910 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cab7e9cb, B => cb136389, Result Obtained => 4addba90,  Expected Value => 4a5dba8e - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a7eed8b, B => 4986ac18, Result Obtained => 49bb977f,  Expected Value => 4a3b977f - Line Number
+Test Failed A => cad16a3a, B => c9a6e381, Result Obtained => ca27b15a,  Expected Value => caa7b15a - Line Number
+Test Passed 
+Test Failed A => cb104e91, B => caf94173, Result Obtained => ca9d6ec0,  Expected Value => c99d6ebc - Line Number
+Test Failed A => cabd5b77, B => cb01da8f, Result Obtained => 4a8cb350,  Expected Value => 4a0cb34e - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4b15c484, B => 4adebcb6, Result Obtained => 4a9998a4,  Expected Value => 4a1998a4 - Line Number
+Test Passed 
+Test Failed A => c9270755, B => c9e19258, Result Obtained => 490e0eae,  Expected Value => 498e0eae - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caecbc24, B => ca42c7c4, Result Obtained => ca0b5842,  Expected Value => ca8b5842 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cac836a1, B => caadea87, Result Obtained => ca5260d0,  Expected Value => c95260d0 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => cab46525, B => c90bab68, Result Obtained => ca22efb8,  Expected Value => caa2efb8 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => ca0c5342, B => ca1a45de, Result Obtained => 49df29c0,  Expected Value => 485f29c0 - Line Number
+Test Failed A => 4ab44147, B => 489cc891, Result Obtained => 4a2a74be,  Expected Value => 4aaa74be - Line Number
+Test Failed A => 4a168c44, B => 4a87217c, Result Obtained => ca6f6d68,  Expected Value => c9ef6d68 - Line Number
+Test Passed 
+Test Failed A => 4ae6df90, B => 4ad2e5d1, Result Obtained => 4a1fcdf8,  Expected Value => 491fcdf8 - Line Number
+Test Failed A => 49852276, B => 4ade668b, Result Obtained => ca3d1dee,  Expected Value => cabd1dee - Line Number
+Test Failed A => c98ab148, B => caccd900, Result Obtained => 4a2a2cae,  Expected Value => 4aaa2cae - Line Number
+Test Passed 
+Test Failed A => cad29528, B => ca9b0686, Result Obtained => ca5e3a88,  Expected Value => c9de3a88 - Line Number
+Test Passed 
+Test Failed A => cad35157, B => cada9e37, Result Obtained => 4a699c00,  Expected Value => 48699c00 - Line Number
+Test Passed 
+Test Failed A => 4839837a, B => 4a5f6165, Result Obtained => c9d3c92e,  Expected Value => ca53c92d - Line Number
+Test Failed A => ca132052, B => ca848560, Result Obtained => 4a6bd4dc,  Expected Value => 49ebd4dc - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => c93eea6e, B => cab01ab7, Result Obtained => 4a183d6a,  Expected Value => 4a983d69 - Line Number
+Test Passed 
+Test Failed A => 4a815355, B => 46c97f8f, Result Obtained => 4a0089d6,  Expected Value => 4a8089d5 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 49d57dcb, B => 4afd1e24, Result Obtained => ca47beb2,  Expected Value => cac7beb1 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => cae72b5e, B => cab65537, Result Obtained => ca43589c,  Expected Value => c9c3589c - Line Number
+Test Failed A => 4a9f6283, B => 4931d137, Result Obtained => 4a09285d,  Expected Value => 4a89285c - Line Number
+Test Passed 
+Test Failed A => 4b0d8a4c, B => 4b127a2d, Result Obtained => ca9dfc20,  Expected Value => c89dfc20 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4acc8f69, B => 496d14d3, Result Obtained => 4a2eeccf,  Expected Value => 4aaeeccf - Line Number
+Test Failed A => 4a8e9060, B => 4b02df56, Result Obtained => caee5c98,  Expected Value => ca6e5c98 - Line Number
+Test Passed 
+Test Failed A => cab01442, B => caaff265, Result Obtained => ca077400,  Expected Value => c5877400 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cafc9e80, B => cb0d95c5, Result Obtained => 4af46850,  Expected Value => 49746850 - Line Number
+Test Passed 
+Test Failed A => 4af26c0a, B => 49c7a421, Result Obtained => 4a408302,  Expected Value => 4ac08302 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => c9a3f802, B => ca64ef51, Result Obtained => 4992f350,  Expected Value => 4a12f350 - Line Number
+Test Passed 
+Test Failed A => 4a45b2de, B => 4ae4ae46, Result Obtained => ca01d4d7,  Expected Value => ca81d4d7 - Line Number
+Test Passed 
+Test Failed A => ca6dd1cb, B => caa64f60, Result Obtained => 4a3d99ec,  Expected Value => 49bd99ea - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cac804cc, B => cb0c03c9, Result Obtained => 4aa0058c,  Expected Value => 4a20058c - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => c9cd1ec3, B => c8bd11fb, Result Obtained => c91dda45,  Expected Value => c99dda44 - Line Number
+Test Failed A => cab92522, B => ca9c087b, Result Obtained => ca68e538,  Expected Value => c968e538 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a919481, B => 48e72dcb, Result Obtained => 4a0321a5,  Expected Value => 4a8321a4 - Line Number
+Test Passed 
+Test Failed A => caa379a1, B => ca6f083f, Result Obtained => ca2fd608,  Expected Value => c9afd606 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4949562d, B => 4a5a6225, Result Obtained => c9a80c9a,  Expected Value => ca280c9a - Line Number
+Test Failed A => ca1d4bcd, B => ca2c8cc3, Result Obtained => 49f40f60,  Expected Value => 48740f60 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb0e03ac, B => cae3b6e5, Result Obtained => cae141d0,  Expected Value => c9e141cc - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cab9933d, B => cac42d41, Result Obtained => 4a29a040,  Expected Value => 48a9a040 - Line Number
+Test Failed A => caaaebd4, B => c9686dc8, Result Obtained => ca0dde1b,  Expected Value => ca8dde1b - Line Number
+Test Passed 
+Test Failed A => 4a6bb709, B => 4a434026, Result Obtained => 49a1db8c,  Expected Value => 4921db8c - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => c9f70f8e, B => cae13cbb, Result Obtained => 4a2378d8,  Expected Value => 4aa378d8 - Line Number
+Test Failed A => 4ad5637c, B => 495de363, Result Obtained => 4a39a710,  Expected Value => 4ab9a710 - Line Number
+Test Failed A => 49761bae, B => 4b14443e, Result Obtained => ca84e284,  Expected Value => cb04e283 - Line Number
+Test Failed A => 4924b7a3, B => 4ab32f28, Result Obtained => ca1e9834,  Expected Value => ca9e9834 - Line Number
+Test Failed A => c8d618ad, B => cafe9dc4, Result Obtained => 4a713c3a,  Expected Value => 4af13c39 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => cac15572, B => c99049a1, Result Obtained => ca1d430a,  Expected Value => ca9d430a - Line Number
+Test Passed 
+Test Failed A => caa6c1ac, B => cadc957c, Result Obtained => 4a574f40,  Expected Value => 49d74f40 - Line Number
+Test Failed A => 49ac8a80, B => 4af9c72a, Result Obtained => ca4ea48a,  Expected Value => cacea48a - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4ab1160c, B => 4ae06419, Result Obtained => ca3d3834,  Expected Value => c9bd3834 - Line Number
+Test Failed A => c937d80f, B => cae1f023, Result Obtained => 4a4af522,  Expected Value => 4acaf521 - Line Number
+Test Failed A => 4a5f2aa7, B => 4a20f200, Result Obtained => 49f8e29c,  Expected Value => 4978e29c - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => caf14322, B => cab6e9e9, Result Obtained => ca6964e4,  Expected Value => c9e964e4 - Line Number
+Test Passed 
+Test Failed A => c93212ae, B => ca986224, Result Obtained => 4a021fcf,  Expected Value => 4a821fce - Line Number
+Test Failed A => 4adc4c5f, B => 4ae6d437, Result Obtained => ca287d80,  Expected Value => c8a87d80 - Line Number
+Test Failed A => c9c9f2fa, B => c86251ca, Result Obtained => c92da8c1,  Expected Value => c9ada8c1 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a02ffd5, B => 4addd524, Result Obtained => ca1c553a,  Expected Value => ca9c553a - Line Number
+Test Failed A => 4aefba76, B => 4b088b7a, Result Obtained => ca8571f8,  Expected Value => c98571f8 - Line Number
+Test Failed A => 4b0375e4, B => 4b0b2b30, Result Obtained => caf6a980,  Expected Value => c8f6a980 - Line Number
+Test Passed 
+Test Failed A => c944e304, B => cad51a95, Result Obtained => 4a3c7e35,  Expected Value => 4abc7e34 - Line Number
+Test Failed A => 4a81e681, B => 4a9da094, Result Obtained => ca5dd098,  Expected Value => c95dd098 - Line Number
+Test Passed 
+Test Failed A => caba7e1a, B => cb0fb60d, Result Obtained => 4ac9dc00,  Expected Value => 4a49dc00 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4afba603, B => 48cb5775, Result Obtained => 4a6ef08c,  Expected Value => 4aeef08c - Line Number
+Test Failed A => 49d87b13, B => 4ae0753d, Result Obtained => ca2a5679,  Expected Value => caaa5678 - Line Number
+Test Passed 
+Test Failed A => cb04929d, B => caa7e5f9, Result Obtained => cac27e84,  Expected Value => ca427e82 - Line Number
+Test Passed 
+Test Failed A => cad1d5d4, B => c8c8fa54, Result Obtained => ca45462f,  Expected Value => cac5462f - Line Number
+Test Passed 
+Test Failed A => cad645e9, B => cb07f638, Result Obtained => 4ae69a20,  Expected Value => 49e69a1c - Line Number
+Test Passed 
+Test Failed A => 4a93d20a, B => 4a413ade, Result Obtained => 4a4cd26c,  Expected Value => 49ccd26c - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4acbb890, B => 4ac75a9c, Result Obtained => 4a0bbe80,  Expected Value => 480bbe80 - Line Number
+Test Passed 
+Test Failed A => ca154d80, B => c9e2a288, Result Obtained => c98ff0f0,  Expected Value => c90ff0f0 - Line Number
+Test Failed A => c9a52f8a, B => cb153afc, Result Obtained => 4a80950b,  Expected Value => 4b00950b - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b138278, B => 4aae214b, Result Obtained => 4af1c74c,  Expected Value => 4a71c74a - Line Number
+Test Passed 
+Test Failed A => 4a82b0fc, B => 4a8695d6, Result Obtained => ca793680,  Expected Value => c7f93680 - Line Number
+Test Passed 
+Test Failed A => 4addb7de, B => 49b0577b, Result Obtained => 4a31a200,  Expected Value => 4ab1a1ff - Line Number
+Test Passed 
+Test Failed A => 4ac08c29, B => 49820bd2, Result Obtained => 4a200935,  Expected Value => 4aa00934 - Line Number
+Test Failed A => ca0e98d0, B => cae0eb78, Result Obtained => 4a199f10,  Expected Value => 4a999f10 - Line Number
+Test Failed A => 4aedc583, B => 4b07a09d, Result Obtained => ca85eee0,  Expected Value => c985eedc - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => ca84a834, B => cab90546, Result Obtained => 4a517448,  Expected Value => 49d17448 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4afa8b70, B => 4a123f9f, Result Obtained => 4a316ba1,  Expected Value => 4ab16ba0 - Line Number
+Test Failed A => 4ad45d9f, B => 4aa6d9bc, Result Obtained => 4a360f8c,  Expected Value => 49b60f8c - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb0bdc23, B => cacef0e7, Result Obtained => ca918ec0,  Expected Value => ca118ebe - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => c9bbdf26, B => c9c02f4b, Result Obtained => 490a04a0,  Expected Value => 470a04a0 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4a83c36e, B => 4ac39df7, Result Obtained => ca7f6a24,  Expected Value => c9ff6a24 - Line Number
+Test Failed A => 4a75e6df, B => 4a89b86c, Result Obtained => ca6c4fd0,  Expected Value => c8ec4fc8 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => c95ade7c, B => ca5470f7, Result Obtained => 499db958,  Expected Value => 4a1db958 - Line Number
+Test Failed A => cafc1a2a, B => c8b6eef8, Result Obtained => ca70ab3b,  Expected Value => caf0ab3a - Line Number
+Test Failed A => 484d1557, B => 4a327c2b, Result Obtained => c9a5aad6,  Expected Value => ca25aad6 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => ca9d2d1a, B => caae742a, Result Obtained => 4a0a3880,  Expected Value => 490a3880 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 4b000140, B => 4a9692e6, Result Obtained => 4ad2df34,  Expected Value => 4a52df34 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4b04443e, B => 4ad07f0d, Result Obtained => 4ae025c0,  Expected Value => 49e025bc - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caf79589, B => caf6cd2b, Result Obtained => ca485e00,  Expected Value => c6c85e00 - Line Number
+Test Passed 
+Test Failed A => c972b2eb, B => ca4c13f1, Result Obtained => 498f6737,  Expected Value => 4a0f6736 - Line Number
+Test Passed 
+Test Failed A => 4b075649, B => 4b0c99f1, Result Obtained => caa87500,  Expected Value => c8a87500 - Line Number
+Test Failed A => c8551100, B => ca694a2f, Result Obtained => 49dbf91f,  Expected Value => 4a5bf91f - Line Number
+Test Passed 
+Test Failed A => 4aa47fab, B => 46e090fa, Result Obtained => 4a239f1b,  Expected Value => 4aa39f1a - Line Number
+Test Passed 
+Test Failed A => cac8b988, B => c9b0f3c2, Result Obtained => ca1c7c98,  Expected Value => ca9c7c98 - Line Number
+Test Failed A => 4ac4778a, B => 4adf7fa0, Result Obtained => ca5840b0,  Expected Value => c95840b0 - Line Number
+Test Failed A => cad2571c, B => ca0fea30, Result Obtained => ca0a6204,  Expected Value => ca8a6204 - Line Number
+Test Failed A => 4b14ec9c, B => 4b0d78dd, Result Obtained => 4aee77e0,  Expected Value => 48ee77e0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a5bc825, B => 49773437, Result Obtained => 499dfb18,  Expected Value => 4a1dfb17 - Line Number
+Test Passed 
+Test Failed A => 4b060b6e, B => 4a8e6ac7, Result Obtained => 4afb582c,  Expected Value => 4a7b582a - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4ac65268, B => 4ad49a1a, Result Obtained => ca647b20,  Expected Value => c8e47b20 - Line Number
+Test Failed A => 495ee284, B => 4af2d246, Result Obtained => ca56f5f6,  Expected Value => cad6f5f6 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => cb0d2078, B => cacaca12, Result Obtained => ca9eedbc,  Expected Value => ca1eedbc - Line Number
+Test Failed A => cb1809e2, B => cb0e94be, Result Obtained => ca975240,  Expected Value => c9175240 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 47bc5af5, B => 4b1507b0, Result Obtained => ca938efb,  Expected Value => cb138efa - Line Number
+Test Failed A => caaa3af2, B => ca61c757, Result Obtained => ca655d1c,  Expected Value => c9e55d1a - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => c8069434, B => c7a56348, Result Obtained => c7cf8a40,  Expected Value => c74f8a40 - Line Number
+Test Passed 
+Test Failed A => ca477b8f, B => ca893915, Result Obtained => 4a15ed38,  Expected Value => 4995ed36 - Line Number
+Test Passed 
+Test Failed A => ca982cf7, B => cb0ac9ef, Result Obtained => 4afacdd0,  Expected Value => 4a7acdce - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4afa6e21, B => 4b006f45, Result Obtained => cace0d40,  Expected Value => c84e0d20 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => 4a025cf2, B => 4ac5d68f, Result Obtained => ca04a816,  Expected Value => ca84a816 - Line Number
+Test Passed 
+Test Failed A => c7d1d1bf, B => cab0c2f0, Result Obtained => 4a2d7baa,  Expected Value => 4aad7ba9 - Line Number
+Test Failed A => cadc19e7, B => c9b70e5f, Result Obtained => ca2e5650,  Expected Value => caae564f - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => c9f4ca65, B => caf28a4c, Result Obtained => 4a3557b3,  Expected Value => 4ab557b3 - Line Number
+Test Passed 
+Test Failed A => 4b0bee8e, B => 4b013bb0, Result Obtained => 4aab2de0,  Expected Value => 492b2de0 - Line Number
+Test Passed 
+Test Passed 
+Test Passed 
+Test Failed A => caf41c21, B => cb0dd135, Result Obtained => 4a9e1928,  Expected Value => 499e1924 - Line Number
+Test Failed A => 00000000, B => 3ec7ae14, Result Obtained => be3851ec,  Expected Value => 3ec7ae14 - Line Number
+Test Failed A => 3ec7ae14, B => 00000000, Result Obtained => 3e3851ec,  Expected Value => 3ec7ae14 - Line Number
+Test Failed A => 00000000, B => 00000000, Result Obtained => 7f800000,  Expected Value => 00000000 - Line Number
+Test Passed 
+Test Passed 
+Test Failed A => 3ec7ae14, B => 7f800000, Result Obtained => ff000000,  Expected Value => 00000000 - Line Number
+Test Passed 
+Test Passed 
+$stop called at time : 794 ns : File "C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/Alu_addition_tb.v" Line 870
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 839.449 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Alu_addition_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 839.449 ; gain = 0.000

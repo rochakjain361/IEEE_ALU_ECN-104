@@ -26,15 +26,14 @@ wire Exception;
 wire Underflow;
 wire Overflow;
 
-integer pass   = 0;
-integer error  = 0;
+reg pass;
+reg error; 
 
 reg clk = 1'b0;
 assign d0 = 1'd0;
 ALU dut(a_operand,b_operand,Operation,ALU_Output,Exception,Overflow,Underflow);
 
 always #5 clk = ~clk;
-
 initial
 begin
 iteration (32'h4201_51EC,32'h4242_147B,32'h42A1_B333,3'b001,`__LINE__,1'b0);
@@ -366,7 +365,6 @@ iteration (32'h4a3e2933,32'h4aab2f84,32'hb5c1d6cc,3'b111,`__LINE__,1'b0);
 iteration (32'h4a8a8ae8,32'h4ae6d529,32'hb5757517,3'b111,`__LINE__,1'b0);     
 $stop;
 end
-
 task iteration(input [31:0] operand_a,operand_b,expected_value,input [3:0] operation,input integer line_num,input expected_exception);
 begin
 	@(negedge clk)
@@ -380,9 +378,17 @@ begin
 	@(posedge clk)
 	begin
 		if ((expected_value[31:15] == ALU_Output[31:15]))
+		    begin
 			$display ("Test Passed - Line Number -> %d", line_num);
+			pass = 1'b1;
+			error = 1'b0;
+			end
 		else 
+		    begin
 			$display ("Test Failed Expected Result -> %h and Expected_Exception -> %b and Obtained Result -> %h and Obtained Exception -> %b of corresponding Operation -> %d and %d",expected_value,expected_exception,ALU_Output,Exception,operation,line_num);
+			error = 1'b1;
+			pass = 1'b0;
+			end
 	end
 end
 endtask
