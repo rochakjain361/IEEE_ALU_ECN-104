@@ -53,7 +53,7 @@ module Alu_addAndSubtract(
     //Exceptions in addition and subtraction:
     //1) Either one of the exponent is 255 (or 128 as we have range from -128 to 128)
     
-    assign Exception = (&a_operand[30:23])|(&a_operand[30:23]);
+    assign exception = (&a_operand[30:23])|(&a_operand[30:23]);
     
     //For operations always operand_a must be greater than b_operand for conducting operations properly
     assign{switch_operands, a_oprnd, b_oprnd} = (a_operand[30:0] < b_operand[30:0]) ? {1'b1,b_operand,a_operand} : {1'b0,a_operand,b_operand};
@@ -98,6 +98,6 @@ module Alu_addAndSubtract(
     //////---OUTPUT---//////
     // If there is no exception, the operation will evaluate   
     
-    assign result = Exception ? 32'b0 : ((!operation_subBar_add) ? {sign_of_output, sub_difference} : {sign_of_output, add_sum});
+    assign result = exception ? 32'b0 : ((!operation_subBar_add) ? {sign_of_output, sub_difference} : {sign_of_output, add_sum});
     
 endmodule
