@@ -1,0 +1,392 @@
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/Floating_Point_ALU/Floating_Point_ALU.srcs/sources_1/new/Priority_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Priority_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/Downloads/division_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Alu_division_tb
+INFO: [VRFC 10-311] analyzing module Alu_division
+INFO: [VRFC 10-311] analyzing module Iteration
+INFO: [VRFC 10-311] analyzing module Alu_multiplication
+INFO: [VRFC 10-311] analyzing module Alu_addAndSubtract
+INFO: [VRFC 10-2458] undeclared symbol perform, assumed default net type wire [C:/Users/Rochak Roopesh Jain/Downloads/division_test.v:340]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/Downloads/iteration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iteration
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Iteration' [C:/Users/Rochak Roopesh Jain/Downloads/iteration.v:8]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_tb
+INFO: [VRFC 10-2458] undeclared symbol d0, assumed default net type wire [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:33]
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2458] undeclared symbol Mul_Underflow, assumed default net type wire [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:417]
+INFO: [VRFC 10-311] analyzing module Alu_addAndSubtract
+INFO: [VRFC 10-2458] undeclared symbol Exception, assumed default net type wire [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:467]
+INFO: [VRFC 10-2458] undeclared symbol perform, assumed default net type wire [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:488]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Alu_addAndSubtract' [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:435]
+INFO: [VRFC 10-311] analyzing module Alu_multiplication
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Alu_multiplication' [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:516]
+INFO: [VRFC 10-311] analyzing module Alu_division
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Alu_division' [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:559]
+INFO: [VRFC 10-311] analyzing module Iteration
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Iteration' [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:620]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+"xelab -wto 24bb8ad462474ddebfb22d41ca849cb8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 24bb8ad462474ddebfb22d41ca849cb8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 'operation' [C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Priority_encoder
+Compiling module xil_defaultlib.Alu_addAndSubtract
+Compiling module xil_defaultlib.Alu_multiplication
+Compiling module xil_defaultlib.Iteration
+Compiling module xil_defaultlib.Alu_division
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.ALU_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALU_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_tb_behav -key {Behavioral:sim_1:Functional:ALU_tb} -tclbatch {ALU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source ALU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test Passed - Line Number ->          39
+Test Passed - Line Number ->          40
+Test Failed Expected Result -> cb6396f6 and Expected_Exception -> 0 and Obtained Result -> cXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          41
+Test Failed Expected Result -> 48fe9f98 and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          42
+Test Failed Expected Result -> 4a2cc2cc and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          43
+Test Passed - Line Number ->          44
+Test Passed - Line Number ->          45
+Test Failed Expected Result -> c8d737d0 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          46
+Test Passed - Line Number ->          47
+Test Passed - Line Number ->          48
+Test Passed - Line Number ->          49
+Test Failed Expected Result -> 4a86e521 and Expected_Exception -> 0 and Obtained Result -> 4a06e521 and Obtained Exception -> z of corresponding Operation ->  1 and          50
+Test Failed Expected Result -> cae648f3 and Expected_Exception -> 0 and Obtained Result -> caxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          51
+Test Failed Expected Result -> 4a9a1560 and Expected_Exception -> 0 and Obtained Result -> 4a1a1560 and Obtained Exception -> z of corresponding Operation ->  1 and          52
+Test Passed - Line Number ->          53
+Test Failed Expected Result -> ca1db694 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          54
+Test Passed - Line Number ->          55
+Test Failed Expected Result -> ca2b707b and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          56
+Test Failed Expected Result -> ca8ffac3 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          57
+Test Passed - Line Number ->          58
+Test Failed Expected Result -> 4a5f534d and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          59
+Test Passed - Line Number ->          60
+Test Passed - Line Number ->          61
+Test Failed Expected Result -> cb0dd4ef and Expected_Exception -> 0 and Obtained Result -> cXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          62
+Test Failed Expected Result -> caab5640 and Expected_Exception -> 0 and Obtained Result -> cXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          63
+Test Failed Expected Result -> 4a64a3a6 and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          64
+Test Passed - Line Number ->          65
+Test Passed - Line Number ->          66
+Test Passed - Line Number ->          67
+Test Failed Expected Result -> 488963ac and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          68
+Test Passed - Line Number ->          69
+Test Failed Expected Result -> 4ac53915 and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          70
+Test Failed Expected Result -> c808fa08 and Expected_Exception -> 0 and Obtained Result -> c888fa08 and Obtained Exception -> z of corresponding Operation ->  1 and          71
+Test Failed Expected Result -> caa65cea and Expected_Exception -> 0 and Obtained Result -> Xaxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          72
+Test Failed Expected Result -> cb11a9f0 and Expected_Exception -> 0 and Obtained Result -> cXxxxxxx and Obtained Exception -> z of corresponding Operation ->  1 and          73
+Test Passed - Line Number ->          74
+Test Passed - Line Number ->          75
+Test Passed - Line Number ->          76
+Test Passed - Line Number ->          77
+Test Passed - Line Number ->          78
+Test Passed - Line Number ->          79
+Test Passed - Line Number ->          80
+Test Passed - Line Number ->          81
+Test Failed Expected Result -> ca3ae624 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          82
+Test Failed Expected Result -> cb475244 and Expected_Exception -> 0 and Obtained Result -> cXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          83
+Test Failed Expected Result -> ca5cc150 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          84
+Test Failed Expected Result -> cb39a1e2 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          85
+Test Failed Expected Result -> ca0397dc and Expected_Exception -> 0 and Obtained Result -> c98397dd and Obtained Exception -> z of corresponding Operation ->  2 and          86
+Test Passed - Line Number ->          87
+Test Failed Expected Result -> c9705ffc and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          88
+Test Passed - Line Number ->          89
+Test Passed - Line Number ->          90
+Test Failed Expected Result -> 4b1008f3 and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          91
+Test Passed - Line Number ->          92
+Test Failed Expected Result -> 484dbc48 and Expected_Exception -> 0 and Obtained Result -> 4Xxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          93
+Test Failed Expected Result -> cb54aa81 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          94
+Test Passed - Line Number ->          95
+Test Passed - Line Number ->          96
+Test Failed Expected Result -> cb0496c4 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and          97
+Test Failed Expected Result -> 4a3df9be and Expected_Exception -> 0 and Obtained Result -> 4abdf9c0 and Obtained Exception -> z of corresponding Operation ->  2 and          98
+Test Passed - Line Number ->          99
+Test Failed Expected Result -> ca09e6c7 and Expected_Exception -> 0 and Obtained Result -> c989e6c7 and Obtained Exception -> z of corresponding Operation ->  2 and         100
+Test Failed Expected Result -> 48f199b0 and Expected_Exception -> 0 and Obtained Result -> 4a7199b0 and Obtained Exception -> z of corresponding Operation ->  2 and         101
+Test Passed - Line Number ->         102
+Test Failed Expected Result -> caf0fea1 and Expected_Exception -> 0 and Obtained Result -> Xaxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and         103
+Test Passed - Line Number ->         104
+Test Passed - Line Number ->         105
+Test Passed - Line Number ->         106
+Test Failed Expected Result -> cb0045f1 and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and         107
+Test Passed - Line Number ->         108
+Test Passed - Line Number ->         109
+Test Passed - Line Number ->         110
+Test Passed - Line Number ->         111
+Test Failed Expected Result -> c9b38c5c and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and         112
+Test Failed Expected Result -> cb73542c and Expected_Exception -> 0 and Obtained Result -> XXxxxxxx and Obtained Exception -> z of corresponding Operation ->  2 and         113
+Test Passed - Line Number ->         114
+Test Passed - Line Number ->         115
+Test Passed - Line Number ->         116
+Test Passed - Line Number ->         117
+Test Passed - Line Number ->         118
+Test Passed - Line Number ->         119
+Test Passed - Line Number ->         120
+Test Passed - Line Number ->         121
+Test Passed - Line Number ->         122
+Test Passed - Line Number ->         123
+Test Passed - Line Number ->         124
+Test Passed - Line Number ->         125
+Test Passed - Line Number ->         126
+Test Passed - Line Number ->         127
+Test Passed - Line Number ->         128
+Test Passed - Line Number ->         129
+Test Passed - Line Number ->         130
+Test Passed - Line Number ->         131
+Test Passed - Line Number ->         132
+Test Passed - Line Number ->         133
+Test Passed - Line Number ->         134
+Test Passed - Line Number ->         135
+Test Passed - Line Number ->         136
+Test Passed - Line Number ->         137
+Test Passed - Line Number ->         138
+Test Passed - Line Number ->         139
+Test Passed - Line Number ->         140
+Test Passed - Line Number ->         141
+Test Passed - Line Number ->         142
+Test Passed - Line Number ->         143
+Test Passed - Line Number ->         144
+Test Passed - Line Number ->         145
+Test Passed - Line Number ->         146
+Test Passed - Line Number ->         147
+Test Passed - Line Number ->         148
+Test Passed - Line Number ->         149
+Test Passed - Line Number ->         150
+Test Passed - Line Number ->         151
+Test Passed - Line Number ->         152
+Test Passed - Line Number ->         153
+Test Failed Expected Result -> bbdb64ab and Expected_Exception -> 0 and Obtained Result -> bc5b64ab and Obtained Exception -> 0 of corresponding Operation ->  4 and         154
+Test Passed - Line Number ->         155
+Test Failed Expected Result -> 3f449a5c and Expected_Exception -> 0 and Obtained Result -> 460aeff9 and Obtained Exception -> 0 of corresponding Operation ->  4 and         156
+Test Passed - Line Number ->         157
+Test Passed - Line Number ->         158
+Test Passed - Line Number ->         159
+Test Failed Expected Result -> 3f02038c and Expected_Exception -> 0 and Obtained Result -> 3f82038c and Obtained Exception -> 0 of corresponding Operation ->  4 and         160
+Test Passed - Line Number ->         161
+Test Passed - Line Number ->         162
+Test Passed - Line Number ->         163
+Test Failed Expected Result -> c01526e4 and Expected_Exception -> 0 and Obtained Result -> c09526e3 and Obtained Exception -> 0 of corresponding Operation ->  4 and         164
+Test Passed - Line Number ->         165
+Test Passed - Line Number ->         166
+Test Passed - Line Number ->         167
+Test Passed - Line Number ->         168
+Test Passed - Line Number ->         169
+Test Failed Expected Result -> 3f14e6bd and Expected_Exception -> 0 and Obtained Result -> 413a924c and Obtained Exception -> 0 of corresponding Operation ->  4 and         170
+Test Passed - Line Number ->         171
+Test Passed - Line Number ->         172
+Test Failed Expected Result -> 3e88f57c and Expected_Exception -> 0 and Obtained Result -> 406010f2 and Obtained Exception -> 0 of corresponding Operation ->  4 and         173
+Test Failed Expected Result -> be03cbf6 and Expected_Exception -> 0 and Obtained Result -> be83cbf5 and Obtained Exception -> 0 of corresponding Operation ->  4 and         174
+Test Passed - Line Number ->         175
+Test Failed Expected Result -> 3f00514e and Expected_Exception -> 0 and Obtained Result -> 422a454b and Obtained Exception -> 0 of corresponding Operation ->  4 and         176
+Test Passed - Line Number ->         177
+Test Failed Expected Result -> bf28eb62 and Expected_Exception -> 0 and Obtained Result -> c1e2aa7d and Obtained Exception -> 0 of corresponding Operation ->  4 and         178
+Test Failed Expected Result -> c1181687 and Expected_Exception -> 0 and Obtained Result -> c30c3038 and Obtained Exception -> 0 of corresponding Operation ->  4 and         179
+Test Passed - Line Number ->         180
+Test Failed Expected Result -> bfa070c0 and Expected_Exception -> 0 and Obtained Result -> c39c9d2c and Obtained Exception -> 0 of corresponding Operation ->  4 and         181
+Test Passed - Line Number ->         182
+Test Passed - Line Number ->         183
+Test Passed - Line Number ->         184
+Test Passed - Line Number ->         185
+Test Passed - Line Number ->         186
+Test Failed Expected Result -> bf3f5872 and Expected_Exception -> 0 and Obtained Result -> c1103460 and Obtained Exception -> 0 of corresponding Operation ->  4 and         187
+Test Passed - Line Number ->         188
+Test Failed Expected Result -> 429b2b15 and Expected_Exception -> 0 and Obtained Result -> 4843f52b and Obtained Exception -> 0 of corresponding Operation ->  4 and         189
+Test Passed - Line Number ->         190
+Test Passed - Line Number ->         191
+Test Failed Expected Result -> 3eb7400d and Expected_Exception -> 0 and Obtained Result -> 42587fc9 and Obtained Exception -> 0 of corresponding Operation ->  4 and         192
+Test Passed - Line Number ->         193
+Test Passed - Line Number ->         194
+Test Passed - Line Number ->         195
+Test Passed - Line Number ->         196
+Test Passed - Line Number ->         197
+Test Passed - Line Number ->         198
+Test Passed - Line Number ->         199
+Test Passed - Line Number ->         200
+Test Passed - Line Number ->         201
+Test Passed - Line Number ->         202
+Test Passed - Line Number ->         203
+Test Passed - Line Number ->         204
+Test Passed - Line Number ->         205
+Test Passed - Line Number ->         206
+Test Passed - Line Number ->         207
+Test Passed - Line Number ->         208
+Test Passed - Line Number ->         209
+Test Passed - Line Number ->         210
+Test Passed - Line Number ->         211
+Test Passed - Line Number ->         212
+Test Passed - Line Number ->         213
+Test Passed - Line Number ->         214
+Test Passed - Line Number ->         215
+Test Passed - Line Number ->         216
+Test Passed - Line Number ->         217
+Test Passed - Line Number ->         218
+Test Passed - Line Number ->         219
+Test Passed - Line Number ->         220
+Test Passed - Line Number ->         221
+Test Passed - Line Number ->         222
+Test Passed - Line Number ->         223
+Test Passed - Line Number ->         224
+Test Passed - Line Number ->         225
+Test Passed - Line Number ->         226
+Test Passed - Line Number ->         227
+Test Passed - Line Number ->         228
+Test Passed - Line Number ->         229
+Test Passed - Line Number ->         230
+Test Passed - Line Number ->         231
+Test Passed - Line Number ->         232
+Test Passed - Line Number ->         233
+Test Passed - Line Number ->         234
+Test Passed - Line Number ->         235
+Test Passed - Line Number ->         236
+Test Passed - Line Number ->         237
+Test Passed - Line Number ->         238
+Test Passed - Line Number ->         239
+Test Passed - Line Number ->         240
+Test Passed - Line Number ->         241
+Test Passed - Line Number ->         242
+Test Passed - Line Number ->         243
+Test Passed - Line Number ->         244
+Test Passed - Line Number ->         245
+Test Passed - Line Number ->         246
+Test Passed - Line Number ->         247
+Test Passed - Line Number ->         248
+Test Passed - Line Number ->         249
+Test Passed - Line Number ->         250
+Test Passed - Line Number ->         251
+Test Passed - Line Number ->         252
+Test Passed - Line Number ->         253
+Test Passed - Line Number ->         254
+Test Passed - Line Number ->         255
+Test Passed - Line Number ->         256
+Test Passed - Line Number ->         257
+Test Passed - Line Number ->         258
+Test Passed - Line Number ->         259
+Test Passed - Line Number ->         260
+Test Passed - Line Number ->         261
+Test Passed - Line Number ->         262
+Test Passed - Line Number ->         263
+Test Passed - Line Number ->         264
+Test Passed - Line Number ->         265
+Test Passed - Line Number ->         266
+Test Passed - Line Number ->         267
+Test Passed - Line Number ->         268
+Test Passed - Line Number ->         269
+Test Passed - Line Number ->         270
+Test Passed - Line Number ->         271
+Test Passed - Line Number ->         272
+Test Passed - Line Number ->         273
+Test Passed - Line Number ->         274
+Test Passed - Line Number ->         275
+Test Passed - Line Number ->         276
+Test Passed - Line Number ->         277
+Test Passed - Line Number ->         278
+Test Passed - Line Number ->         279
+Test Passed - Line Number ->         280
+Test Passed - Line Number ->         281
+Test Passed - Line Number ->         282
+Test Passed - Line Number ->         283
+Test Passed - Line Number ->         284
+Test Passed - Line Number ->         285
+Test Passed - Line Number ->         286
+Test Passed - Line Number ->         287
+Test Passed - Line Number ->         288
+Test Passed - Line Number ->         289
+Test Passed - Line Number ->         290
+Test Passed - Line Number ->         291
+Test Passed - Line Number ->         292
+Test Passed - Line Number ->         293
+Test Passed - Line Number ->         294
+Test Passed - Line Number ->         295
+Test Passed - Line Number ->         296
+Test Passed - Line Number ->         297
+Test Passed - Line Number ->         298
+Test Passed - Line Number ->         299
+Test Passed - Line Number ->         300
+Test Passed - Line Number ->         301
+Test Passed - Line Number ->         302
+Test Passed - Line Number ->         303
+Test Passed - Line Number ->         304
+Test Passed - Line Number ->         305
+Test Passed - Line Number ->         306
+Test Passed - Line Number ->         307
+Test Passed - Line Number ->         308
+Test Passed - Line Number ->         309
+Test Passed - Line Number ->         310
+Test Passed - Line Number ->         311
+Test Passed - Line Number ->         312
+Test Passed - Line Number ->         313
+Test Passed - Line Number ->         314
+Test Passed - Line Number ->         315
+Test Passed - Line Number ->         316
+Test Passed - Line Number ->         317
+Test Passed - Line Number ->         318
+Test Passed - Line Number ->         319
+Test Passed - Line Number ->         320
+Test Passed - Line Number ->         321
+Test Passed - Line Number ->         322
+Test Passed - Line Number ->         323
+Test Passed - Line Number ->         324
+Test Passed - Line Number ->         325
+Test Passed - Line Number ->         326
+Test Passed - Line Number ->         327
+Test Passed - Line Number ->         328
+Test Passed - Line Number ->         329
+Test Passed - Line Number ->         330
+Test Passed - Line Number ->         331
+Test Passed - Line Number ->         332
+Test Passed - Line Number ->         333
+Test Passed - Line Number ->         334
+Test Passed - Line Number ->         335
+Test Passed - Line Number ->         336
+Test Passed - Line Number ->         337
+Test Passed - Line Number ->         338
+Test Passed - Line Number ->         339
+Test Passed - Line Number ->         340
+Test Passed - Line Number ->         341
+Test Passed - Line Number ->         342
+Test Passed - Line Number ->         343
+Test Passed - Line Number ->         344
+Test Passed - Line Number ->         345
+$stop called at time : 307500 ps : File "C:/Users/Rochak Roopesh Jain/ALU_IEEE_ECN_104/ALU_IEEE_ECN_104.srcs/sim_1/new/ALU_tb.v" Line 346
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 813.383 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 813.383 ; gain = 0.000
